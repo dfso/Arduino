@@ -10,7 +10,6 @@
 #include <DallasTemperature.h>
 //*****************************
 
-#include <OLED_I2C.h>
 
 //***********************************************************************************
 // porta digital do arduino em que o pino de dados do sensor DS18B20 está ligado
