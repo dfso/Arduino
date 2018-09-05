@@ -4,7 +4,6 @@
 #include <OLED_I2C.h>
 
 
-
 // Data wire no pino A1 no Arduino
 #define ONE_WIRE_BUS A1
 
@@ -39,13 +38,11 @@ void setup(void)
 
   // start oled display
   myOLED.begin();
-  //myOLED.setFont(SmallFont);
 }
 
 void get_temp_c() {
   ds18b20.requestTemperatures();
   temp_c = ds18b20.getTempCByIndex(0);
-  //dtostrf(temp_c, 2, 2, tempCString);
 }
 
 void loop(void)
@@ -57,7 +54,7 @@ void loop(void)
   int y = random(0, 56);
   int x = random(0, 16);
   myOLED.setFont(SmallFont);
-  myOLED.print("Temperatura", x, y - 10);
+  myOLED.print("Temperatura", x, y-10);
   myOLED.setFont(MediumNumbers);
   myOLED.printNumF(temp_c, 2, x, y);
   myOLED.setFont(SmallFont);
